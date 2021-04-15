@@ -1,5 +1,5 @@
 
-# nginx-openid-connect
+# nginx-openid-okta
 
 Reference implementation of NGINX Plus as relying party for OpenID Connect authentication via Okta. Detailed instructions on how you can configure the same are captured in this repository including all the supporting configuration files. 
 
@@ -59,6 +59,12 @@ For installation and other set-up details, please follow the details on [nginx-o
     * Obtain the URL for the **jwks_uri**
       - In my case "jwks_uri":"https://f5jaydesai.okta.com/oauth2/v1/keys"
 
+## Now, configuring NGINX Plus - will the values we have captured in the previous steps
+
+Manual configuration involves reviewing the following file.
+
+  * **openid_connect_configuration.conf** - this contains the primary configuration for one or more IdPs in `map{}` blocks
+    * Modify all of the `map…$oidc_` blocks to match your IdP configuration - to be specific, `$oidc_authz_endpoint`, `$oidc_token_endpoint`, `$oidc_jwt_keyfile`, `$oidc_client` & `$oidc_client_secret`.
 
 
 
