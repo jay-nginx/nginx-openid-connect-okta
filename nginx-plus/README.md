@@ -22,6 +22,10 @@ For installation and other set-up details, please follow the details on [nginx-o
 
   * Create an Application using your Okta Portal
     * https://f5jaydesai-admin.okta.com/admin/getting-started >> Add App (Use Single Sign-on)
+    * ![Add App in Okta Portal](https://user-images.githubusercontent.com/52437445/114878931-14459000-9e44-11eb-9ee2-de169c3c55fe.png)
+`Figure 1. Add App in Okta Portal`
+
+
     * Set the **redirect URI** to the address of your NGINX Plus instance (including the port number), with `/_codexch` as the path, e.g. `https://my-nginx.example.com:443/_codexch`
     * Ensure NGINX Plus is configured as a confidential client (with a client secret) or a public client (with PKCE S256 enabled)
     * Make a note of the `client ID` and `client secret` if set
