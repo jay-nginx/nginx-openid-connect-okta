@@ -21,7 +21,7 @@ For installation and other set-up details, please follow the details on [nginx-o
 ## Configuring & Collecting details from Okta
 
   * Create an Application using your Okta Portal
-    * https://f5jaydesai-admin.okta.com/admin/getting-started >> Add App (Use Single Sign-on)
+    * https://nginxjdesai-admin.okta.com/admin/getting-started >> Add App (Use Single Sign-on)
 
    <img src=https://user-images.githubusercontent.com/52437445/114878931-14459000-9e44-11eb-9ee2-de169c3c55fe.png alt="Okta - Add App" width=500>
    
@@ -38,20 +38,26 @@ For installation and other set-up details, please follow the details on [nginx-o
    <img src=https://user-images.githubusercontent.com/52437445/114881220-23c5d880-9e46-11eb-8940-a7127f1f41a8.png alt="Okta - OpenID App Integration" width=500>
    
    `Figure 4. Create OpenID Connect App Integration in Okta Portal`
-       
+  
+   * Fill **Application name** as you see fit. 
    * Set the **Login redirect URI** to the address of your NGINX Plus instance (including the port number), with `/_codexch` as the path, e.g. `https://nginx-plus-instance.com:443/_codexch`
    
    <img src=https://user-images.githubusercontent.com/52437445/114881428-5a035800-9e46-11eb-9622-a08444a60459.png alt="Okta - ClientID & ClientSecret" width=500>
    
    `Figure 5. Capture Client ID and Client Secret from Okta Portal`
-   
+   * Capture **Client ID** value and save for use later. 
+   * View/Show **Client secret** value and save for use later.
    
 
-  * If your IdP supports OpenID Connect Discovery (usually at the URI `/.well-known/openid-configuration`) then use the `configure.sh` script to complete configuration. In this case you can skip the next section. Otherwise:
+  * Okta supports OpenID Connect Discovery (usually at the URI `/.well-known/openid-configuration`). Access the openid-configuration file and capture the remainder of the values we require to successfully configure our Authentication. 
+  * Open in your browser: `https://nginxjdesai.okta.com/.well-known/openid-configuration`
     * Obtain the URL for `jwks_uri` or download the JWK file to your NGINX Plus instance
     * Obtain the URL for the **authorization endpoint**
+     - In my case "authorization_endpoint":"https://nginxjdesai.okta.com/oauth2/v1/authorize"
     * Obtain the URL for the **token endpoint**
-
+     - In my case "token_endpoint":"https://nginxjdesai.okta.com/oauth2/v1/token"
+    * Obtain the URL for the **jwks_uri**
+     - In my case "jwks_uri":"https://f5jaydesai.okta.com/oauth2/v1/keys"
 
 
 
