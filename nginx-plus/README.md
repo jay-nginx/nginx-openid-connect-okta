@@ -51,13 +51,13 @@ For installation and other set-up details, please follow the details on [nginx-o
 
   * Okta supports OpenID Connect Discovery (usually at the URI `/.well-known/openid-configuration`). Access the openid-configuration file and capture the remainder of the values we require to successfully configure our Authentication. 
   * Open in your browser: `https://nginxjdesai.okta.com/.well-known/openid-configuration`
-    * Obtain the URL for `jwks_uri` or download the JWK file to your NGINX Plus instance
+
     * Obtain the URL for the **authorization endpoint**
-     - In my case "authorization_endpoint":"https://nginxjdesai.okta.com/oauth2/v1/authorize"
+      - In my case "authorization_endpoint":"https://nginxjdesai.okta.com/oauth2/v1/authorize"
     * Obtain the URL for the **token endpoint**
-     - In my case "token_endpoint":"https://nginxjdesai.okta.com/oauth2/v1/token"
+      - In my case "token_endpoint":"https://nginxjdesai.okta.com/oauth2/v1/token"
     * Obtain the URL for the **jwks_uri**
-     - In my case "jwks_uri":"https://f5jaydesai.okta.com/oauth2/v1/keys"
+      - In my case "jwks_uri":"https://f5jaydesai.okta.com/oauth2/v1/keys"
 
 
 
