@@ -38,6 +38,7 @@ For installation and other set-up details, please follow the details on [nginx-o
    <img src=https://user-images.githubusercontent.com/52437445/114881220-23c5d880-9e46-11eb-8940-a7127f1f41a8.png alt="Okta - OpenID App Integration" width=500>
    
    `Figure 4. Create OpenID Connect App Integration in Okta Portal`
+       * Set the **redirect URI** to the address of your NGINX Plus instance (including the port number), with `/_codexch` as the path, e.g. `https://nginx-plus-instance.com:443/_codexch`
    
    <img src=https://user-images.githubusercontent.com/52437445/114881428-5a035800-9e46-11eb-9622-a08444a60459.png alt="Okta - ClientID & ClientSecret" width=500>
    
