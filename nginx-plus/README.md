@@ -27,8 +27,30 @@ For installation and other set-up details, please follow the details on [nginx-o
    
    `Figure 1. Add App in Okta Portal`
 
+   <img src=https://user-images.githubusercontent.com/52437445/114880801-bd40ba80-9e45-11eb-9629-a2f46f3e0c20.png alt="Okta - Create App" width=500>
+   
+   `Figure 2. Create App in Okta Portal`
+
+   <img src=https://user-images.githubusercontent.com/52437445/114880955-e82b0e80-9e45-11eb-9023-9f139048bfa7.png alt="Okta - App Integration" width=500>
+   
+   `Figure 3. Create App Integration in Okta Portal`
+   
+   <img src=https://user-images.githubusercontent.com/52437445/114881220-23c5d880-9e46-11eb-8940-a7127f1f41a8.png alt="Okta - OpenID App Integration" width=500>
+   
+   `Figure 4. Create OpenID Connect App Integration in Okta Portal`
+   
+   <img src=https://user-images.githubusercontent.com/52437445/114881428-5a035800-9e46-11eb-9622-a08444a60459.png alt="Okta - ClientID & ClientSecret" width=500>
+   
+   `Figure 5. Capture Client ID and Client Secret from Okta Portal`
+   
+   
 
   * If your IdP supports OpenID Connect Discovery (usually at the URI `/.well-known/openid-configuration`) then use the `configure.sh` script to complete configuration. In this case you can skip the next section. Otherwise:
     * Obtain the URL for `jwks_uri` or download the JWK file to your NGINX Plus instance
     * Obtain the URL for the **authorization endpoint**
     * Obtain the URL for the **token endpoint**
+
+
+
+
+
