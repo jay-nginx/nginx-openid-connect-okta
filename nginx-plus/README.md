@@ -23,8 +23,9 @@ For installation and other set-up details, please follow the details on [nginx-o
   * Create an Application using your Okta Portal
     * https://f5jaydesai-admin.okta.com/admin/getting-started >> Add App (Use Single Sign-on)
 
-<img src=https://user-images.githubusercontent.com/52437445/114878931-14459000-9e44-11eb-9ee2-de169c3c55fe.png alt="Okta - Add App" width=500>
-`Figure 1. Add App in Okta Portal`
+   <img src=https://user-images.githubusercontent.com/52437445/114878931-14459000-9e44-11eb-9ee2-de169c3c55fe.png alt="Okta - Add App" width=500>
+   
+   `Figure 1. Add App in Okta Portal`
 
 
   * If your IdP supports OpenID Connect Discovery (usually at the URI `/.well-known/openid-configuration`) then use the `configure.sh` script to complete configuration. In this case you can skip the next section. Otherwise:
