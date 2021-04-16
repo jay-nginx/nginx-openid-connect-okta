@@ -68,6 +68,11 @@ Manual configuration involves reviewing the following file.
 
     * openid_connect_configuration.conf file included in this repository has got the values I captured already populated for you to emulate. 
 
+  * **frontend.conf** - you need to switch a comment flag on this file. 
+    * Comment out (or remove) the `auth_jwt_key_file` directive.
+    * Uncomment the `auth_jwt_key_request` directive. (Its parameter, `/_jwks_uri`, refers to the value of the $oidc_jwt_keyfile variable, which you have already set in the previous step.)
+
+
 ## Review & Final Steps
 
 Final checks to ensure we are all set. 
